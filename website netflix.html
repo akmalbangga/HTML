@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk kamu di sana 😊</title>
+    <style>
+        /* --- MENGIMPOR FONT MEWAH DARI GOOGLE FONTS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Latar belakang gelap elegan */
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 50%, #000000 100%);
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* --- EFEK DEBU EMAS (PARTICLES) --- */
+        #particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, #ffe57f 0%, #ffb300 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ffc107, 0 0 20px #ffb300;
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            20% { opacity: 0.8; }
+            80% { opacity: 0.5; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+        /* --- KARTU KACA MEWAH (GLASSMORPHISM) --- */
+        .luxury-card {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.03); /* Transparan */
+            backdrop-filter: blur(15px); /* Efek blur kaca */
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.2); /* Border emas tipis */
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 650px;
+            width: 90%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 215, 0, 0.05);
+            opacity: 0;
+            animation: cardReveal 2s ease-out 0.5s forwards;
+        }
+
+        @keyframes cardReveal {
+            from { opacity: 0; transform: translateY(40px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* --- STYLING TEKS --- */
+        .pre-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            letter-spacing: 4px;
+            color: #d4af37; /* Warna Emas Klasik */
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards 1.5s;
+        }
+
+        .name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 25px;
+            /* Efek teks gradasi emas yang berkilau */
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 2s ease forwards 2.5s;
+            line-height: 1.2;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            line-height: 1.8;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards 4s;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: 400;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Garis Emas Pembatas */
+        .divider {
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 20px auto;
+            animation: expandLine 1.5s ease forwards 3.5s;
+        }
+
+        @keyframes expandLine {
+            to { width: 80%; }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 600px) {
+            .name { font-size: 3rem; }
+            .luxury-card { padding: 40px 20px; }
+            .message { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-container"></div>
+
+    <div class="luxury-card">
+        <p class="pre-text">BRO BERPIKIR INI AKMAL</p>
+        
+        <h1 class="name">untuk kamu cantik</h1>
+        
+        <div class="divider"></div>
+
+        <p class="message">
+            Orang bilang emas dan permata adalah wujud dari kemewahan.<br><br>
+            Tapi bagiku, memiliki teman yang selalu ada, mau mendengarkan, dan tulus sepertimu adalah <span class="highlight">kemewahan yang sesungguhnya</span>.<br><br>
+            Terima kasih sudah menjadi bagian paling terang dalam perjalanan hidupku. <i>You are the bestt .</i> 😜
+        </p>
+    </div>
+
+    <script>
+        const particleContainer = document.getElementById('particles-container');
+        const particleCount = 50; // Jumlah partikel debu emas
+
+        for (let i = 0; i < particleCount; i++) {
+            let particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Ukuran acak untuk setiap partikel (antara 2px - 6px)
+            let size = Math.random() * 4 + 2; 
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Posisi X acak dari 0% hingga 100% layar
+            particle.style.left = `${Math.random() * 100}vw`;
+            
+            // Durasi jatuh acak (antara 5s - 15s)
+            particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+            
+            // Jeda mulai acak agar tidak muncul bersamaan
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            
+            particleContainer.appendChild(particle);
+        }
+    </script>
+</body>
+</html>

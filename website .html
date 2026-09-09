@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bukan untuk siapa siapa </title>
+    <style>
+        /* --- CSS STYLING --- */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Latar belakang gradasi pastel yang hangat (biru & ungu muda) */
+            background: linear-gradient(135deg, #8b55be 0%, #8ec5fc 100%);
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .main-container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        /* --- ANIMASI BINTANG BERKILAU --- */
+        .glow-circle {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+            animation: pulse 2.5s infinite; /* Animasi berdenyut/berkilau perlahan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255,255,255,0.9); }
+            100% { transform: scale(0.95); box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+        }
+
+        /* --- STYLING TEKS UCAPAN --- */
+        .typing-text {
+            font-size: 1.5rem;
+            color: #0c0606;
+            font-weight: 600;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 0.5s;
+        }
+
+        .special-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #05080b;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 1.5s;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .sub-text {
+            font-size: 1.1rem;
+            color: #030507;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out forwards;
+            animation-delay: 3s;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- ANIMASI BACKGROUND PARTIKEL CAHAYA NAIK --- */
+        .stars-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="stars-bg">
+        <div class="star" style="left: 10%; width: 5px; height: 5px; animation-duration: 6s; animation-delay: 0s;"></div>
+        <div class="star" style="left: 30%; width: 8px; height: 8px; animation-duration: 9s; animation-delay: 2s;"></div>
+        <div class="star" style="left: 50%; width: 6px; height: 6px; animation-duration: 7s; animation-delay: 4s;"></div>
+        <div class="star" style="left: 70%; width: 9px; height: 9px; animation-duration: 11s; animation-delay: 1s;"></div>
+        <div class="star" style="left: 90%; width: 4px; height: 4px; animation-duration: 8s; animation-delay: 3s;"></div>
+        <div class="star" style="left: 20%; width: 7px; height: 7px; animation-duration: 10s; animation-delay: 5s;"></div>
+        <div class="star" style="left: 80%; width: 5px; height: 5px; animation-duration: 7.5s; animation-delay: 2.5s;"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="glow-circle">🎉</div>
+        
+        <p class="typing-text">DARI SESEORANG YANG MUNGKIN ANDA KENAL,</p>
+        
+        <h1 class="special-name">plenger banget ihh</h1>
+        
+        <p class="sub-text">Terima kasih sudah menjadi teman. Jangan pernah berubah, you are the best! ❤️😜</p>
+        <p class="sub-text">YAAREEUUUUUU 😏</p>
+    </div>
+
+</body>
+</html>

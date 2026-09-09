@@ -1,0 +1,389 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tahapan Instalasi & Tools Development Web</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1e293b;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #0f172a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .number {
+            width: 40px;
+            height: 40px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .tools {
+            margin-top: 40px;
+        }
+
+        .tool-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tool {
+            background: white;
+            padding: 20px;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .tool h3 {
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .tips {
+            background: #dbeafe;
+            margin-top: 40px;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .tips ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Development Web</h1>
+        <p>Tahapan Instalasi dan Tools yang Digunakan</p>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="#tahapan">Tahapan Instalasi</a>
+        <a href="#tools">Tools Development</a>
+        <a href="#tips">Tips</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- INTRO -->
+        <section class="intro">
+            <h2 class="section-title">Tentang Web Development</h2>
+
+            <p>
+                Web development adalah proses membuat dan mengembangkan
+                sebuah website. Dalam prosesnya diperlukan beberapa tools
+                seperti text editor, browser, server lokal, HTML, CSS,
+                dan JavaScript.
+            </p>
+
+            <p>
+                Berikut merupakan tahapan sederhana yang dapat dilakukan
+                untuk mempersiapkan lingkungan development web.
+            </p>
+        </section>
+
+        <!-- TAHAPAN -->
+        <section id="tahapan">
+
+            <h2 class="section-title">Tahapan Instalasi</h2>
+
+            <div class="steps">
+
+                <div class="card">
+                    <div class="number">1</div>
+
+                    <h3>Persiapkan Komputer</h3>
+
+                    <p>
+                        Pastikan komputer atau laptop sudah siap digunakan
+                        dan memiliki koneksi internet untuk mengunduh
+                        software yang diperlukan.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="number">2</div>
+
+                    <h3>Install VS Code</h3>
+
+                    <p>
+                        Download dan install Visual Studio Code sebagai
+                        text editor untuk menulis kode HTML, CSS,
+                        JavaScript, dan bahasa pemrograman lainnya.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="number">3</div>
+
+                    <h3>Install Browser</h3>
+
+                    <p>
+                        Install browser seperti Google Chrome atau
+                        Mozilla Firefox untuk menjalankan dan menguji
+                        website yang dibuat.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="number">4</div>
+
+                    <h3>Install XAMPP</h3>
+
+                    <p>
+                        XAMPP digunakan sebagai server lokal apabila
+                        website membutuhkan PHP dan database MySQL.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="number">5</div>
+
+                    <h3>Buat Folder Project</h3>
+
+                    <p>
+                        Buat folder khusus untuk menyimpan file project
+                        website seperti index.html, style.css,
+                        dan script.js.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="number">6</div>
+
+                    <h3>Buat File HTML</h3>
+
+                    <p>
+                        Buat file bernama index.html kemudian tuliskan
+                        struktur dasar HTML sebagai halaman utama website.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="number">7</div>
+
+                    <h3>Tambahkan CSS</h3>
+
+                    <p>
+                        CSS digunakan untuk mengatur tampilan website,
+                        seperti warna, ukuran tulisan, posisi,
+                        layout, dan desain.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="number">8</div>
+
+                    <h3>Jalankan Website</h3>
+
+                    <p>
+                        Buka file index.html menggunakan browser untuk
+                        melihat hasil website yang telah dibuat.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section id="tools" class="tools">
+
+            <h2 class="section-title">
+                Tools Development Web
+            </h2>
+
+            <div class="tool-list">
+
+                <div class="tool">
+                    <h3>HTML</h3>
+
+                    <p>
+                        Digunakan untuk membuat struktur atau kerangka
+                        halaman website.
+                    </p>
+                </div>
+
+                <div class="tool">
+                    <h3>CSS</h3>
+
+                    <p>
+                        Digunakan untuk mengatur tampilan dan desain
+                        website agar lebih menarik.
+                    </p>
+                </div>
+
+                <div class="tool">
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Digunakan untuk membuat website menjadi interaktif
+                        dan memiliki fungsi tertentu.
+                    </p>
+                </div>
+
+                <div class="tool">
+                    <h3>Visual Studio Code</h3>
+
+                    <p>
+                        Text editor yang digunakan untuk menulis dan
+                        mengelola kode program website.
+                    </p>
+                </div>
+
+                <div class="tool">
+                    <h3>Google Chrome</h3>
+
+                    <p>
+                        Browser yang digunakan untuk menjalankan dan
+                        melakukan testing terhadap website.
+                    </p>
+                </div>
+
+                <div class="tool">
+                    <h3>XAMPP</h3>
+
+                    <p>
+                        Digunakan sebagai server lokal untuk menjalankan
+                        PHP dan database MySQL.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TIPS -->
+        <section id="tips" class="tips">
+
+            <h2>Tips Development Web</h2>
+
+            <ul>
+                <li>Gunakan struktur folder yang rapi.</li>
+                <li>Gunakan nama file yang mudah dipahami.</li>
+                <li>Biasakan melakukan testing di browser.</li>
+                <li>Simpan project secara berkala.</li>
+                <li>Pelajari HTML terlebih dahulu sebelum masuk ke CSS dan JavaScript.</li>
+                <li>Gunakan Git/GitHub untuk menyimpan versi project.</li>
+            </ul>
+
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Web Development | Dibuat untuk pembelajaran
+        </p>
+    </footer>
+
+</body>
+</html>
+```
