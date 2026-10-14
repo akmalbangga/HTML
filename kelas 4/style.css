@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #090014;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.login {
+    width: 425px;
+    max-width: 100%;
+    padding: 45px 40px;
+    text-align: center;
+    background: #120b20;
+    border: 1px solid #9d25ff;
+    border-radius: 22px;
+    box-shadow: 0 0 35px #8b2be255;
+    animation: show 1s ease;
+}
+
+.login h1 {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 40px;
+}
+
+.login p {
+    color: #999;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.login input {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+    background: #1d1328;
+    border: 1px solid #3a234d;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.login input::placeholder {
+    color: #888;
+}
+
+.login:focus {
+    border-color: #b75cff;
+    box-shadow: 0 0 10px #8b2be255;
+}
+
+.login button {
+    width: 100%;
+    padding: 18px;
+    margin-top: 12px;
+    background: #a52cff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login button:hover {
+    background: #b75cff;
+    box-shadow: 0 0 15px #a52cff88;
+    transform: translateY(-2px);
+}
+
+.footer-text {
+    margin-top: 25px;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-text a {
+    color: #b75cff;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    padding-right: 75px;
+}
+
+.password-box button {
+    position: absolute;
+    right: 8px;
+    top: 0;
+    width: auto;
+    padding: 10px;
+    margin: 0;
+    background: transparent;
+    color: #b75cff;
+    font-size: 13px;
+}
+
+.password-box button:hover {
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .login {
+        padding: 35px 25px;
+    }
+
+    .login h1 {
+        font-size: 32px;
+    }
+}
+
